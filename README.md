@@ -77,3 +77,12 @@ yarn lint
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### 参考
+
+部分CMD包分析：https://github.com/czp3009/bilibili-api/tree/master/record/%E7%9B%B4%E6%92%AD%E5%BC%B9%E5%B9%95
+
+
+### 测试网址
+阿梓直播间：
+http://localhost:8080/live.html#room=510&stay=3600000&giftComb=5000
