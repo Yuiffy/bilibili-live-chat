@@ -55,6 +55,7 @@ export default {
       });
       live.on('close', () => console.log('已断开与直播弹幕服务器的连接'));
       live.on('heartbeat', online => console.log('当前人气值', online));
+
       // 礼物
       const giftList = props.giftPin ? giftPinList : danmakuList;
       live.on('SEND_GIFT', ({ data: { uid, uname, action, giftName, num, face } }) => {
@@ -94,6 +95,7 @@ export default {
           });
         }
       });
+
       // 弹幕
       live.on('DANMU_MSG', ({ info: [, message, [uid, uname, isOwner /*, isVip, isSvip*/]] }) => {
         const danmaku = {
@@ -108,6 +110,7 @@ export default {
         if (props.delay > 0) setTimeout(() => addDanmaku(danmaku), props.delay * 1000);
         else addDanmaku(danmaku);
       });
+
       // SC
       live.on('SUPER_CHAT_MESSAGE', fullData => {
         console.log('SUPER_CHAT_MESSAGE', fullData);
